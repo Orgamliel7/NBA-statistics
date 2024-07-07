@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 NBA_STATS_URL = 'https://www.nba.com/stats/players/'
 
+
 def get_nba_stats(player_name):
     response = requests.get(NBA_STATS_URL)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -28,9 +29,11 @@ def get_nba_stats(player_name):
             return stats
     return None
 
+
 @app.route('/')
 def home():
     return "Welcome to the NBA Stats API!"
+
 
 @app.route('/stats/<player_name>')
 def stats(player_name):
@@ -39,6 +42,7 @@ def stats(player_name):
         return jsonify(data)
     else:
         return jsonify({"error": "Player not found"}), 404
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
