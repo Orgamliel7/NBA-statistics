@@ -1,7 +1,3 @@
-Certainly! Here's the README file formatted with headlines and emojis, similar to what you've seen on the web:
-
----
-
 # NBA Statistics App 🏀
 
 Welcome to the NBA Statistics App! This project is dedicated to all basketball enthusiasts who live and breathe the game of basketball, just like me. 🌟
